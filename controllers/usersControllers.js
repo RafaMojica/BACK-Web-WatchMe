@@ -43,9 +43,10 @@ const persistence = (req, res) => {
     const token = req.cookies.token;
     if (!token) throw new Error("Inicia sesion");
 
-    const payload = validateToken(token);
-    if (!payload) throw new Error("Inicia sesion");
-    res.send(payload);
+    const { user } = validateToken(token);
+    if (!user) throw new Error("Inicia sesion");
+    
+    res.send(user);
   } catch (error) {
     res.status(401).send(`${error.name}: ${error.message}`);
   }
