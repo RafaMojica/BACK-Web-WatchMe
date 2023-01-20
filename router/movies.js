@@ -1,6 +1,5 @@
 const express = require("express");
 const routerMovies = express.Router();
-const axios = require("axios");
 
 //VER PELICULAS MAS POPULARES
 routerMovies.get("/popular");
