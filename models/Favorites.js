@@ -1,5 +1,5 @@
 const S = require("sequelize");
-const db = require("../db");
+const db = require("../config/db");
 
 //CREACION DEL MODELO FAVORITOS
 class Favorite extends S.Model {}
