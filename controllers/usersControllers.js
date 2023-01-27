@@ -57,4 +57,15 @@ const logout = (req, res) => {
   res.sendStatus(204);
 };
 
-module.exports = { register, login, persistence, logout };
+const deleteUser = async(req, res) => {
+  try {
+      const email = req.params.email
+
+      User.destroy({where: {email}})
+      res.status(202).send("Usuario eliminado exitosamente")
+  } catch (error) {
+      res.status(400).send(`${error.name}: ${error.message}`);
+  }
+}
+
+module.exports = { register, login, persistence, logout, deleteUser };

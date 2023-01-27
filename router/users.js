@@ -1,6 +1,6 @@
 const express = require("express");
 const routerUsers = express.Router();
-const { register, login, persistence, logout } = require("../controllers/usersControllers");
+const { register, login, persistence, logout, deleteUser } = require("../controllers/usersControllers");
 
 //CREACION DE USUARIO
 routerUsers.post("/register", register);
@@ -12,6 +12,9 @@ routerUsers.post("/login", login)
 routerUsers.get("/me", persistence)
 
 //CERRAR SESION
-routerUsers.get("/LOGOUT", logout)
+routerUsers.get("/Logout", logout)
+
+//ELIMINAR PERFIL USUARIO
+routerUsers.delete("/delete/:email", deleteUser)
 
 module.exports = routerUsers;
