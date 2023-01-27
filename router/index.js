@@ -9,6 +9,6 @@ const routerUsers = require("./users");
 router.use("/movies", routerMovies);
 router.use("/users", routerUsers);
 router.use("/series", routerSeries);
-router.use("/series", routerFavorites);
+router.use("/favorites", routerFavorites);
 
 module.exports = router;
