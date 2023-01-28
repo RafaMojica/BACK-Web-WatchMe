@@ -3,7 +3,7 @@
 <!-- INTRODUCCION -->
 <div align="center">
   <a href="https://github.com/RafaMojica/BACK-Web-WatchMe">
-    <img src="utils/logoWatchMe.png" alt="Logo" width="450">
+    <img src="utils/logoWatchMe.png" alt="Logo" width="500">
   </a>
 
   <h3 align="center">API WATCH ME - BACKEND</h3>
