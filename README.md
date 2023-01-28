@@ -29,7 +29,7 @@
   <li>
     <a href="#descripción-del-proyecto">Descripción del Proyecto</a>
     <ul>
-      <li><a href="#tecnologias-utilizadas">Tecnologías utilizadas</a></li>
+      <li><a href="#tecnologías-utilizadas">Tecnologías utilizadas</a></li>
     </ul>
   </li>
   <li>
@@ -128,7 +128,7 @@ Actualmente la base de datos es totalmente local. Por lo tanto, deberás seguir 
 
 ## Documentación API
 
-<p align="center"><img src="https://cdn.shopify.com/s/files/1/0057/5668/2355/files/Postman-logo-orange-2021_1155x.png?v=1637252529" alt="Logo" width="40%"></p>
+<p align="center"><img src="https://www.torocloud.com/hubfs/Imported_Blog_Media/swagger-logo.png" alt="Logo" width="40%"></p>
 
 Puedes encontrar a continuación la documentación detallada de todos los métodos de la API: <a href="#" target="_blank">Documentación API</a>
 
@@ -141,29 +141,25 @@ Puedes encontrar a continuación la documentación detallada de todos los métod
 
 ## Funcionalidades
 
-- [x] 🔹 Features for all users
-  - [x] Sign up
-  - [x] Login/Logout
-  - [x] Session persistence
-  - [x] My User profile
-  - [x] User's profile
-  - [x] Search Movie
-  - [x] Search TV Show
-  - [x] Search User
-  - [x] Favorites list: Create, Share, Delete
-  - [x] Movie details
-  - [x] TV Show details
-  - [x] Movie Genres
-  - [x] TV Show Genres
-- [x] 🔹 Admin features
-  - [x] Delete users
-  - [x] Change roles
-  - [x] Change index carrousel
-- [x] 🔹 Additional features
-  - [x] Recommendations: TV Shows or Movies based on user preferences
-  - [x] Surprise me: Randomly choose a tv show or movie
-  - [x] Backend monitoring
-  - [x] Email service
+- 🔹 USUARIOS
+
+  - [x] Registrarse
+  - [x] Iniciar sesión
+  - [x] Cerrar sesión
+  - [x] Ver mi perfil
+  - [x] Eliminar mi perfil
+  - [x] Ver peliculas o series de TV
+  - [x] Buscar: peliculas o series de TV
+  - [x] Ver detalles: peliculas o series de TV
+  - [x] Filtrar por genero: peliculas o series de TV
+  - [x] Agregar a favoritos: peliculas o series de TV
+  - [x] Ver lista de favoritos
+  - [x] Eliminar de favoritos: peliculas o series de TV
+  
+- 🔹 OTRAS
+
+  - [x] Persistencia de sesión
+  - [x] Observar pelicula o series de TV similares a la escogida
 
 <p align="right"><a href="#inicio">⬆ Volver al inicio</a></p>
 
@@ -196,7 +192,7 @@ Puedes encontrar a continuación la documentación detallada de todos los métod
  <a href="rafael.mojica27@gmail.com">
          <img alt="Gmail" title="gmail" src="https://custom-icon-badges.demolab.com/badge/-rafael.mojica27@gmail.com-red?style=for-the-badge&logo=mention&logoColor=white"/></a>
        <a href="https://www.linkedin.com/in/rafamojica/">
-         <img alt="Linkedin" title="linkedin" src="https://custom-icon-badges.demolab.com/badge/-Linkeding-blue?style=for-the-badge&logoColor=white&logo=portafolio"/></a>
+         <img alt="Linkedin" title="linkedin" src="https://custom-icon-badges.demolab.com/badge/-Linkedin-blue?style=for-the-badge&logoColor=white&logo=portafolio"/></a>
       <a href="https://www.linkedin.com/in/rafamojica/">
          <img alt="Portafolio" title="portafolio" src="https://custom-icon-badges.demolab.com/badge/-Portafolio-teal?style=for-the-badge&logo=repo-template&logoColor=white"/></a>
        <a href="https://www.linkedin.com/in/rafamojica/">
@@ -204,7 +200,5 @@ Puedes encontrar a continuación la documentación detallada de todos los métod
         <a href="https://github.com/RafaMojica?tab=repositories">
          <img alt="Repositorios" title="Mira mis repositorios" src="https://custom-icon-badges.demolab.com/badge/-Repositorios-orange?style=for-the-badge&logoColor=white&logo=repo"/></a>
    </p>
-
-Link Proyecto: [https://github.com/RafaMojica/BACK-Web-WatchMe](https://github.com/RafaMojica/BACK-Web-WatchMe)
 
 <p align="right"><a href="#inicio">⬆ Volver al inicio</a></p>
