@@ -1,6 +1,6 @@
 <a name="inicio"></a>
 
-<!-- INTRODUCCION -->
+<!-- INTRODUCCIÓN -->
 
 <div align="center">
   <a href="https://github.com/RafaMojica/BACK-Web-WatchMe">
@@ -9,11 +9,11 @@
 
   <p align="center">
     <h3 align="center">API WATCH ME - BACKEND</h3>
-    <a href="#"><strong>Ver la pagina »</strong></a>
+    <a href="#"><strong>Ver la página Web »</strong></a>
     <br />
-    <a href="https://github.com/RafaMojica/BACK-Web-WatchMe"><strong>Ver la documento »</strong></a>
+    <a href="https://github.com/RafaMojica/BACK-Web-WatchMe"><strong>Ver el repositorio »</strong></a>
     <br />
-    <a href="#"><strong>Ver el respositorio Frontend »</strong></a>
+    <a href="#"><strong>Ver el repositorio Frontend »</strong></a>
     <br />
   </p>
 </div>
@@ -21,7 +21,7 @@
 
 
 
-<!-- TABLE DE CONTENIDO -->
+<!-- TABLA DE CONTENIDO -->
 
 ## Tabla de contenido
 
@@ -52,9 +52,9 @@
 
 ## Descripción del proyecto
 
-Sitio Web que permite al usuario ver descripciones de películas y series de televisión consumiendo la información de la API <a href="https://www.themoviedb.org/?language=es">The Movie Database - TMDB</a>, ademas el usuario puede registrarse para así poder empezar a crear su propia lista de favoritos con toda la informacion de cada pelicula o serie. 
+Sitio Web que permite al usuario ver descripciones de películas y series de televisión consumiendo la información de la API <a href="https://www.themoviedb.org/?language=es">The Movie Database - TMDB</a>, además el usuario puede registrarse para así poder empezar a crear su propia lista de favoritos con toda la información de cada película o serie.
 
-### Tecnologias utilizadas
+### Tecnologías utilizadas
 
 |                |                |
 |:--------------:|:--------------:|
@@ -77,7 +77,7 @@ Sitio Web que permite al usuario ver descripciones de películas y series de tel
 
 Actualmente la base de datos es totalmente local. Por lo tanto, deberás seguir estas instrucciones para compilar el proyecto de back-end, a continuación debes cumplir con los siguientes requisitos para poder utilizar este proyecto.
 
-### Pre requisitos
+### Pre-requisitos
 
 - DB: Crea la base de datos usando PSQL
   ```sh
@@ -86,15 +86,15 @@ Actualmente la base de datos es totalmente local. Por lo tanto, deberás seguir 
 
 ### Instalación
 
-1. Clona el repositoria
+1. Clona el repositorio
    ```sh
    git clone https://github.com/RafaMojica/BACK-Web-WatchMe.git
    ```
-2. Instala las dependencia NPM
+2. Instala las dependencias NPM
    ```sh
    npm install
    ```
-3. Crea un archivo en el root __.env__ despues usa como base el archivo __.env.example__ que se encuentra en este repositorio
+3. Crea un archivo en el root __.env__ después usa como base el archivo __.env.example__ que se encuentra en este repositorio
    ```sh
     #CONFIGURACIONES GENERALES
     SERVIDOR="localhost"
@@ -110,7 +110,7 @@ Actualmente la base de datos es totalmente local. Por lo tanto, deberás seguir 
     SECRET="Palabra que desea utilizar para encriptar las contraseñas"
 
     #API TMD
-    KEY="Key que suministra la API al registrarse en la pagina web"
+    KEY="Key que suministra la API al registrarse en la página web"
     URL="https://api.themoviedb.org/3"
     URL_IMG="https://image.tmdb.org/t/p"
    ```
@@ -130,7 +130,7 @@ Actualmente la base de datos es totalmente local. Por lo tanto, deberás seguir 
 
 <p align="center"><img src="https://cdn.shopify.com/s/files/1/0057/5668/2355/files/Postman-logo-orange-2021_1155x.png?v=1637252529" alt="Logo" width="40%"></p>
 
-Puedes encontrar a continuacion la documentación detallada de todos los métodos de la API: <a href="#" target="_blank">Documentación API</a>
+Puedes encontrar a continuación la documentación detallada de todos los métodos de la API: <a href="#" target="_blank">Documentación API</a>
 
 <p align="right"><a href="#inicio">⬆ Volver al inicio</a></p>
 
@@ -192,8 +192,8 @@ Puedes encontrar a continuacion la documentación detallada de todos los método
 
 ## Contacto
 
-- Rafael Mojica » [Email](rafael.mojica27@gmail.com) - [LinkedIn](https://www.linkedin.com/in/rafamojica/)
+- Rafael Mojica » [Email](rafael.mojica27@gmail.com) - [Linkedin](https://www.linkedin.com/in/rafamojica/)
 
-Project Link: [https://github.com/RafaMojica/BACK-Web-WatchMe](https://github.com/RafaMojica/BACK-Web-WatchMe)
+Link Proyecto: [https://github.com/RafaMojica/BACK-Web-WatchMe](https://github.com/RafaMojica/BACK-Web-WatchMe)
 
 <p align="right"><a href="#inicio">⬆ Volver al inicio</a></p>
