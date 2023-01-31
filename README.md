@@ -98,7 +98,7 @@ Actualmente la base de datos es totalmente local. Por lo tanto, deberás seguir 
    ```sh
     #CONFIGURACIONES GENERALES
     SERVIDOR="localhost"
-    PORT="puerto que desea utilizar"
+    PORT=8080
 
     #CONFIGURACION BASE DE DATOS
     DB="postgres"
@@ -130,7 +130,7 @@ Actualmente la base de datos es totalmente local. Por lo tanto, deberás seguir 
 
 <p align="center"><img src="https://www.torocloud.com/hubfs/Imported_Blog_Media/swagger-logo.png" alt="Logo" width="45%"></p>
 </br>
-Puedes encontrar a continuación la documentación detallada de todos los métodos de la API: <a href="#" target="_blank">Documentación API</a>
+Puedes encontrar a continuación la documentación detallada de todos los métodos de la API: <a href="https://app.swaggerhub.com/apis-docs/RafaMojica/WatchMe/1.0.0" target="_blank">Documentación API</a>
 </br>
 </br>
 <p align="right"><a href="#inicio">⬆ Volver al inicio</a></p>
