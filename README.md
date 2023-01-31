@@ -107,7 +107,7 @@ Actualmente la base de datos es totalmente local. Por lo tanto, deberás seguir 
     DB_PASS="contraseña de la cuenta"
 
     #CONFIGURACION TOKEN JWT
-    SECRET="Palabra que desea utilizar para encriptar las contraseñas"
+    SECRET="Palabra que desea utilizar para encriptar los token de autenticación"
 
     #API TMD
     KEY="Key que suministra la API al registrarse en la página web"
