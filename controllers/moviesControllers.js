@@ -5,7 +5,7 @@ const popularMovies = async (req, res) => {
     movies = await axios.get(`${process.env.URL}/movie/popular?api_key=${process.env.KEY}`);
     res.status(200).send(movies.data);
   } catch (error) {
-    res.send(error);
+    res.sendStatus(404);
   }
 };
 
@@ -16,7 +16,7 @@ const similarMovies = async (req, res) => {
     movies = await axios.get(`${process.env.URL}/movie/${id}/similar?api_key=${process.env.KEY}`);
     res.status(200).send(movies.data);
   } catch (error) {
-    res.send(error);
+    res.sendStatus(404);
   }
 };
 
@@ -27,7 +27,7 @@ const selectMovie = async (req, res) => {
     movie = await axios.get(`${process.env.URL}/movie/${id}?api_key=${process.env.KEY}`);
     res.status(200).send(movie.data);
   } catch (error) {
-    res.send(error);
+    res.sendStatus(404);
   }
 };
 
@@ -38,7 +38,7 @@ const serchMovies = async (req, res) => {
     movies = await axios.get(`${process.env.URL}/search/movie?api_key=${process.env.KEY}&query=${name}`)
     res.status(200).send(movies.data);
   } catch (error) {
-    res.send(error);
+    res.sendStatus(404);
   }
 }
 
@@ -47,7 +47,7 @@ const genreMovies = async (req, res) => {
     genres = await axios.get(`${process.env.URL}/genre/movie/list?api_key=${process.env.KEY}`)
     res.status(200).send(genres.data);
   } catch (error) {
-    res.send(error);
+    res.sendStatus(404);
   }
 }
 

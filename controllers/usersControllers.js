@@ -10,7 +10,7 @@ const register = async (req, res) => {
     await User.create(req.body);
     res.status(201).send("Registro exitoso");
   } catch (error) {
-    res.send(error);
+    res.status(400).send(`${error.name}: ${error.message}`);
   }
 };
 
@@ -34,7 +34,7 @@ const login = async (req, res) => {
     res.cookie("token", token);
     res.status(200).send(payload);
   } catch (error) {
-    res.send(error);
+    res.status(404).send(`${error.name}: ${error.message}`);
   }
 };
 
@@ -48,7 +48,7 @@ const persistence = (req, res) => {
     
     res.send(user);
   } catch (error) {
-    res.send(error);
+    res.status(401).send(`${error.name}: ${error.message}`);
   }
 };
 
@@ -60,11 +60,13 @@ const logout = (req, res) => {
 const deleteUser = async(req, res) => {
   try {
       const email = req.params.email
+      const user = await User.findOne({ where: { email } });
+      if (!user) throw new Error("Usuario no registrado");
 
       User.destroy({where: {email}})
       res.status(202).send("Usuario eliminado exitosamente")
   } catch (error) {
-    res.send(error);
+    res.status(404).send(`${error.name}: ${error.message}`);
   }
 }
 
