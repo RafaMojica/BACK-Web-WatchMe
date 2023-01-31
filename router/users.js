@@ -1,12 +1,14 @@
 const express = require("express");
 const routerUsers = express.Router();
 const { register, login, persistence, logout, deleteUser } = require("../controllers/usersControllers");
+const { loginValidation } = require("../validator/login");
+const { registerValidation } = require("../validator/register");
 
 //CREACION DE USUARIO
-routerUsers.post("/register", register);
+routerUsers.post("/register",registerValidation , register);
 
 //INICIO DE SESION
-routerUsers.post("/login", login)
+routerUsers.post("/login",loginValidation, login)
 
 //PERSISTENCIA DE SESION
 routerUsers.get("/me", persistence)
