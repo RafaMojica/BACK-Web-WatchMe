@@ -19,7 +19,7 @@ const addFavorite = async (req, res) => {
     user.addFavorite(newFavorite)
     res.status(200).send("Agregado con exito a favoritos")
   } catch (error) {
-    res.status(400).send(`${error.name}: ${error.message}`);
+    res.send(error);
   }
 };
 
@@ -30,7 +30,7 @@ const seeFavorites = async (req, res) => {
         const user = await User.findOne({where: { email }, include: { model: Favorite }})
         res.status(200).send(user.dataValues.favorites)
     } catch (error) {
-        res.status(400).send(`${error.name}: ${error.message}`);
+      res.send(error);
     }
 }
 
@@ -40,7 +40,7 @@ const deleteFavorites = async(req, res) => {
         Favorite.destroy({where: {id}})
         res.status(202).send("Favorito eliminado exitosamente")
     } catch (error) {
-        res.status(400).send(`${error.name}: ${error.message}`);
+      res.send(error);
     }
 }
 

@@ -12,7 +12,7 @@ routerUsers.post("/login", login)
 routerUsers.get("/me", persistence)
 
 //CERRAR SESION
-routerUsers.get("/Logout", logout)
+routerUsers.get("/logout", logout)
 
 //ELIMINAR PERFIL USUARIO
 routerUsers.delete("/delete/:email", deleteUser)

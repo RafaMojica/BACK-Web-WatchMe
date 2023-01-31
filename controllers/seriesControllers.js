@@ -5,7 +5,7 @@ const popularSeries = async (req, res) => {
     series = await axios.get(`${process.env.URL}/tv/popular?api_key=${process.env.KEY}`);
     res.status(200).send(series.data);
   } catch (error) {
-    res.status(400).send(`${error.name}: ${error.message}`);
+    res.send(error);
   }
 };
 
@@ -16,7 +16,7 @@ const similarSeries = async (req, res) => {
     movies = await axios.get(`${process.env.URL}/tv/${id}/similar?api_key=${process.env.KEY}`);
     res.status(200).send(movies.data);
   } catch (error) {
-    res.status(400).send(`${error.name}: ${error.message}`);
+    res.send(error);
   }
 };
 
@@ -27,7 +27,7 @@ const selectSerie = async (req, res) => {
     serie = await axios.get(`${process.env.URL}/tv/${id}?api_key=${process.env.KEY}`);
     res.status(200).send(serie.data);
   } catch (error) {
-    res.status(400).send(`${error.name}: ${error.message}`);
+    res.send(error);
   }
 };
 
@@ -38,7 +38,7 @@ const serchSeries = async (req, res) => {
     movie = await axios.get(`${process.env.URL}/search/tv?api_key=${process.env.KEY}&query=${name}`)
     res.status(200).send(movie.data);
   } catch (error) {
-    res.status(400).send(`${error.name}: ${error.message}`);
+    res.send(error);
   }
 }
 
@@ -47,7 +47,7 @@ const genreSeries = async (req, res) => {
     genres = await axios.get(`${process.env.URL}/genre/tv/list?api_key=${process.env.KEY}`)
     res.status(200).send(genres.data);
   } catch (error) {
-    res.status(400).send(`${error.name}: ${error.message}`);
+    res.send(error);
   }
 }
 
