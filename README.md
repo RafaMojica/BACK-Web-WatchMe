@@ -13,7 +13,7 @@
     <br />
     <a href="https://github.com/RafaMojica/BACK-Web-WatchMe"><strong>Ver el repositorio »</strong></a>
     <br />
-    <a href="#"><strong>Ver el repositorio Frontend »</strong></a>
+    <a href="https://github.com/RafaMojica/FRONT-Web-WatchMe"><strong>Ver el repositorio Frontend »</strong></a>
     <br />
   </p>
 </div>
