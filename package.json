@@ -2,9 +2,12 @@
   "name": "back-web-watchme",
   "version": "1.0.0",
   "description": "Sitio Web para ver descripciones de películas y series consumiendo la información de la API de The Movie Database (TMDB).",
+  "author": "Rafael Mojica",
+  "license": "ISC",
+  "private": true,
+  "homepage": "https://github.com/RafaMojica/BACK-Web-WatchMe#readme",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js"
   },
   "repository": {
@@ -13,11 +16,9 @@
   },
   "keywords": [
     "peliculas",
+    "television",
     "series"
   ],
-  "author": "Rafael Mojica",
-  "license": "ISC",
-  "homepage": "https://github.com/RafaMojica/BACK-Web-WatchMe#readme",
   "devDependencies": {
     "nodemon": "^2.0.20",
     "volleyball": "^1.5.1"
