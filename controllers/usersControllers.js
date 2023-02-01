@@ -1,13 +1,9 @@
-const { tokenGenerator, validateToken } = require("../config/token");
-const { User } = require("../models");
+const { tokenGenerator } = require("../config/token");
+const usersServices = require("../services/usersServices")
 
 const register = async (req, res) => {
   try {
-    const { email } = req.body;
-    const UserMatch = await User.findOne({ where: { email } });
-    if (UserMatch) throw new Error("Usuario ya registrado");
-
-    await User.create(req.body);
+    await usersServices.register(req.body)
     res.status(201).send("Registro exitoso");
   } catch (error) {
     res.status(400).send(`${error.name}: ${error.message}`);
@@ -16,20 +12,7 @@ const register = async (req, res) => {
 
 const login = async (req, res) => {
   try {
-    const { email, password } = req.body;
-    const user = await User.findOne({ where: { email } });
-    if (!user) throw new Error("Usuario no registrado");
-
-    const validatePassword = await user.validatePassword(password);
-    if (!validatePassword) throw new Error("Contraseña incorrecta");
-
-    const payload = {
-      id: user.id,
-      name: user.name,
-      lastname: user.lastname,
-      email: user.email,
-    };
-
+    const payload = await usersServices.login(req.body)
     const token = tokenGenerator(payload);
     res.cookie("token", token);
     res.status(200).send(payload);
@@ -38,15 +21,10 @@ const login = async (req, res) => {
   }
 };
 
-const persistence = (req, res) => {
+const persistence = async (req, res) => {
   try {
-    const token = req.cookies.token;
-    if (!token) throw new Error("Inicia sesion");
-
-    const { user } = validateToken(token);
-    if (!user) throw new Error("Inicia sesion");
-    
-    res.send(user);
+    const user = await usersServices.persistence(req.cookies.token)
+    res.status(200).send(user);
   } catch (error) {
     res.status(401).send(`${error.name}: ${error.message}`);
   }
@@ -59,12 +37,8 @@ const logout = (req, res) => {
 
 const deleteUser = async(req, res) => {
   try {
-      const email = req.params.email
-      const user = await User.findOne({ where: { email } });
-      if (!user) throw new Error("Usuario no registrado");
-
-      User.destroy({where: {email}})
-      res.status(202).send("Usuario eliminado exitosamente")
+    await usersServices.deleteUser(req.params.email)
+    res.status(202).send("Usuario eliminado exitosamente")
   } catch (error) {
     res.status(404).send(`${error.name}: ${error.message}`);
   }

@@ -1,9 +1,9 @@
-const axios = require("axios");
+const moviesServices = require("../services/moviesServices");
 
 const popularMovies = async (req, res) => {
   try {
-    movies = await axios.get(`${process.env.URL}/movie/popular?api_key=${process.env.KEY}`);
-    res.status(200).send(movies.data);
+    const movies = await moviesServices.popularMovies();
+    res.status(200).send(movies);
   } catch (error) {
     res.sendStatus(404);
   }
@@ -11,10 +11,8 @@ const popularMovies = async (req, res) => {
 
 const similarMovies = async (req, res) => {
   try {
-    const id = req.params.id;
-
-    movies = await axios.get(`${process.env.URL}/movie/${id}/similar?api_key=${process.env.KEY}`);
-    res.status(200).send(movies.data);
+    const movies = await moviesServices.similarMovies(req.params.id);
+    res.status(200).send(movies);
   } catch (error) {
     res.sendStatus(404);
   }
@@ -22,33 +20,29 @@ const similarMovies = async (req, res) => {
 
 const selectMovie = async (req, res) => {
   try {
-    const id = req.params.id;
-
-    movie = await axios.get(`${process.env.URL}/movie/${id}?api_key=${process.env.KEY}`);
-    res.status(200).send(movie.data);
+    const movie = await moviesServices.selectMovie(req.params.id);
+    res.status(200).send(movie);
   } catch (error) {
     res.sendStatus(404);
   }
 };
 
-const serchMovies = async (req, res) => {
+const searchMovies = async (req, res) => {
   try {
-    const name = req.params.name
-
-    movies = await axios.get(`${process.env.URL}/search/movie?api_key=${process.env.KEY}&query=${name}`)
-    res.status(200).send(movies.data);
+    const movies = await moviesServices.searchMovies(req.params.name);
+    res.status(200).send(movies);
   } catch (error) {
     res.sendStatus(404);
   }
-}
+};
 
 const genreMovies = async (req, res) => {
   try {
-    genres = await axios.get(`${process.env.URL}/genre/movie/list?api_key=${process.env.KEY}`)
-    res.status(200).send(genres.data);
+    const genres = await moviesServices.genreMovies();
+    res.status(200).send(genres);
   } catch (error) {
     res.sendStatus(404);
   }
-}
+};
 
-module.exports = { popularMovies, selectMovie, serchMovies, similarMovies, genreMovies };
+module.exports = { popularMovies, selectMovie, searchMovies, similarMovies, genreMovies };
