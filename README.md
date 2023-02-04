@@ -190,15 +190,14 @@ Puedes encontrar a continuación la documentación detallada de todos los métod
 ## Contacto
 
  <p align="left">
- <a href="rafael.mojica27@gmail.com">
-         <img alt="Gmail" title="gmail" src="https://custom-icon-badges.demolab.com/badge/-rafael.mojica27@gmail.com-red?style=for-the-badge&logo=mention&logoColor=white"/></a>
-       <a href="https://www.linkedin.com/in/rafamojica/">
+         <img alt="Gmail" title="gmail" src="https://custom-icon-badges.demolab.com/badge/-rafael.mojica27@gmail.com-red?style=for-the-badge&logo=mention&logoColor=white"/>
+       <a href="https://www.linkedin.com/in/rafamojica/" target="_blank" rel="noopener noreferrer">
          <img alt="Linkedin" title="linkedin" src="https://custom-icon-badges.demolab.com/badge/-Linkedin-blue?style=for-the-badge&logoColor=white&logo=portafolio"/></a>
-      <a href="https://www.linkedin.com/in/rafamojica/">
+      <a href="https://www.linkedin.com/in/rafamojica/" target="_blank" rel="noopener noreferrer">
          <img alt="Portafolio" title="portafolio" src="https://custom-icon-badges.demolab.com/badge/-Portafolio-teal?style=for-the-badge&logo=repo-template&logoColor=white"/></a>
-       <a href="https://www.linkedin.com/in/rafamojica/">
+       <a href="https://drive.google.com/file/d/1vve95FnPtt4y23Ly8Zrdea0GkMl16OTc/view?usp=share_link" target="_blank" rel="noopener noreferrer">
          <img alt="CV" title="Mira mi CV" src="https://custom-icon-badges.demolab.com/badge/-CV-F25278?style=for-the-badge&logo=download&logoColor=white"/></a>
-        <a href="https://github.com/RafaMojica?tab=repositories">
+        <a href="https://github.com/RafaMojica?tab=repositories" target="_blank" rel="noopener noreferrer">
          <img alt="Repositorios" title="Mira mis repositorios" src="https://custom-icon-badges.demolab.com/badge/-Repositorios-orange?style=for-the-badge&logoColor=white&logo=repo"/></a>
    </p>
 
