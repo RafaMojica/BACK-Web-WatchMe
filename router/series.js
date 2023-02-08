@@ -1,5 +1,5 @@
 const express = require("express");
-const { popularSeries, selectSerie, searchSeries, similarSeries, genreSeries } = require("../controllers/seriesControllers");
+const { popularSeries, selectSerie, searchSeries, similarSeries, genreSeries, topSeries } = require("../controllers/seriesControllers");
 const routerSeries = express.Router();
 
 //VER SERIES MAS POPULARES
@@ -16,5 +16,8 @@ routerSeries.get("/search/:name", searchSeries);
 
 //GENEROS OFICIALES SERIES
 routerSeries.get("/genre", genreSeries);
+
+//VER SERIES MEJOR CALIFICADAS
+routerSeries.get("/topRated", topSeries);
 
 module.exports = routerSeries;

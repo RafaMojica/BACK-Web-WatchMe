@@ -24,3 +24,8 @@ exports.genreSeries = async () => {
   const genres = await axios.get(`${process.env.URL}/genre/tv/list?api_key=${process.env.KEY}`)
   return genres.data
 }
+
+exports.topSeries = async () => {
+  const topSeries = await axios.get(`${process.env.URL}/tv/top_rated?api_key=${process.env.KEY}`)
+  return topSeries.data
+};

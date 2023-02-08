@@ -45,4 +45,13 @@ const genreMovies = async (req, res) => {
   }
 };
 
-module.exports = { popularMovies, selectMovie, searchMovies, similarMovies, genreMovies };
+const topMovies = async (req, res) => {
+  try {
+    const topMovies = await moviesServices.topMovies();
+    res.status(200).send(topMovies);
+  } catch (error) {
+    res.sendStatus(404);
+  }
+};
+
+module.exports = { popularMovies, selectMovie, searchMovies, similarMovies, genreMovies, topMovies };

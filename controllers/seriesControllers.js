@@ -45,4 +45,13 @@ const genreSeries = async (req, res) => {
   }
 }
 
-module.exports = { popularSeries, selectSerie, searchSeries, similarSeries, genreSeries };
+const topSeries = async (req, res) => {
+  try {
+    const topSeries = await seriesServices.topSeries();
+    res.status(200).send(topSeries);
+  } catch (error) {
+    res.sendStatus(404);
+  }
+};
+
+module.exports = { popularSeries, selectSerie, searchSeries, similarSeries, genreSeries, topSeries };
