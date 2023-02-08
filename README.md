@@ -109,10 +109,9 @@ Actualmente la base de datos es totalmente local. Por lo tanto, deberás seguir 
     #CONFIGURACION TOKEN JWT
     SECRET="Palabra que desea utilizar para encriptar los token de autenticación"
 
-    #API TMD
+    #API TMD (WEB: https://www.themoviedb.org/)
     KEY="Key que suministra la API al registrarse en la página web"
     URL="https://api.themoviedb.org/3"
-    URL_IMG="https://image.tmdb.org/t/p"
    ```
 4. Corre el servidor
    ```sh
