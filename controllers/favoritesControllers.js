@@ -1,4 +1,3 @@
-const { Favorite, User } = require("../models");
 const favoritesServices = require("../services/favoritesServices");
 
 const addFavorite = async (req, res) => {
