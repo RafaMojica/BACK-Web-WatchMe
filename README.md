@@ -159,7 +159,6 @@ Puedes encontrar a continuación la documentación detallada de todos los métod
 - 🔹 OTRAS
 
   - [x] Persistencia de sesión
-  - [x] Observar pelicula o series de TV similares a la escogida
 
 <p align="right"><a href="#inicio">⬆ Volver al inicio</a></p>
 

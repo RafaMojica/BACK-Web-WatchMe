@@ -5,11 +5,6 @@ exports.popularSeries = async () => {
   return series.data
 }
 
-exports.similarSeries = async (id) => {
-  const series = await axios.get(`${process.env.URL}/tv/${id}/similar?api_key=${process.env.KEY}`);
-  return series.data
-}
-
 exports.selectSerie = async (id) => {
   const serie = await axios.get(`${process.env.URL}/tv/${id}?api_key=${process.env.KEY}`);
   return serie.data

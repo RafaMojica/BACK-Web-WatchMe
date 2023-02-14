@@ -5,9 +5,6 @@ const routerMovies = express.Router();
 //VER PELICULAS MAS POPULARES
 routerMovies.get("/popular", popularMovies);
 
-//VER PELICULAS SIMILARES
-routerMovies.get("/similar/:id", similarMovies);
-
 //VER PELICULA SELECCIONADA
 routerMovies.get("/select/:id", selectMovie);
 

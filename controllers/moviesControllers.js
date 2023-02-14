@@ -9,15 +9,6 @@ const popularMovies = async (req, res) => {
   }
 };
 
-const similarMovies = async (req, res) => {
-  try {
-    const movies = await moviesServices.similarMovies(req.params.id);
-    res.status(200).send(movies);
-  } catch (error) {
-    res.sendStatus(404);
-  }
-};
-
 const selectMovie = async (req, res) => {
   try {
     const movie = await moviesServices.selectMovie(req.params.id);
@@ -54,4 +45,4 @@ const topMovies = async (req, res) => {
   }
 };
 
-module.exports = { popularMovies, selectMovie, searchMovies, similarMovies, genreMovies, topMovies };
+module.exports = { popularMovies, selectMovie, searchMovies, genreMovies, topMovies };
