@@ -12,7 +12,7 @@ const registerValidation = [
     .withMessage("El campo debe tener contenido")
     .trim()
     .isAlpha('en-US', {ignore: '\s'})
-    .withMessage("El campo debe tener contener solo letras"),
+    .withMessage("El campo debe contener solo letras"),
   check("lastname")
     .exists()
     .withMessage("El campo debe existir")
@@ -22,7 +22,7 @@ const registerValidation = [
     .contains()
     .withMessage("El campo debe tener contenido")
     .isAlpha('en-US', {ignore: '\s'})
-    .withMessage("El campo debe tener contener solo letras"),
+    .withMessage("El campo debe contener solo letras"),
   check("email")
     .exists()
     .withMessage("El campo debe existir")

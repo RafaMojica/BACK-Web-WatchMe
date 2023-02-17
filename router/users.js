@@ -1,8 +1,8 @@
 const express = require("express");
 const routerUsers = express.Router();
 const { register, login, persistence, logout, deleteUser } = require("../controllers/usersControllers");
-const { loginValidation } = require("../validator/login");
-const { registerValidation } = require("../validator/register");
+const { loginValidation } = require("../validations/login");
+const { registerValidation } = require("../validations/register");
 
 //CREACION DE USUARIO
 routerUsers.post("/register",registerValidation , register);
