@@ -6,7 +6,7 @@ const register = async (req, res) => {
     await usersServices.register(req.body)
     res.status(201).send("Registro exitoso");
   } catch (error) {
-    res.status(400).send(`${error.name}: ${error.message}`);
+    res.status(400).send(`${error.message}`);
   }
 };
 
@@ -17,7 +17,7 @@ const login = async (req, res) => {
     res.cookie("token", token);
     res.status(200).send(payload);
   } catch (error) {
-    res.status(404).send(`${error.name}: ${error.message}`);
+    res.status(404).send(`${error.message}`);
   }
 };
 
@@ -26,7 +26,7 @@ const persistence = async (req, res) => {
     const user = await usersServices.persistence(req.cookies.token)
     res.status(200).send(user);
   } catch (error) {
-    res.status(401).send(`${error.name}: ${error.message}`);
+    res.status(401).send(`${error.message}`);
   }
 };
 
@@ -40,7 +40,7 @@ const deleteUser = async(req, res) => {
     await usersServices.deleteUser(req.params.email)
     res.status(202).send("Usuario eliminado exitosamente")
   } catch (error) {
-    res.status(404).send(`${error.name}: ${error.message}`);
+    res.status(404).send(`${error.message}`);
   }
 }
 
