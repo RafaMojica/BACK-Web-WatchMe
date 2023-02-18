@@ -2,12 +2,16 @@ const { Favorite, User } = require("../models");
 
 exports.addFavorite = async (favoriteData) => {
   const { movie, email } = favoriteData;
-
-  const user = await User.findOne({ where: { email } });
+  const user = await User.findOne({ where: { email }, include: { model: Favorite } });
   if (!user) throw new Error("Inicia sesion para agregar a favoritos");
 
+  const favorites = user.dataValues.favorites
+  favorites.forEach(films => {
+    if(films.movieId === movie.id) throw new Error("Ya la agregaste a favoritos");
+  });
+
   const newFavorite = await Favorite.create({
-    movieId: movie.movieId,
+    movieId: movie.id,
     backdrop_path: movie.backdrop_path,
     poster_path: movie.poster_path,
     title: movie.title || movie.name,

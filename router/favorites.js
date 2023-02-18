@@ -1,10 +1,9 @@
 const express = require("express");
 const { addFavorite, seeFavorites, deleteFavorites } = require("../controllers/favoritesControllers");
-const { addFavortitesValidation } = require("../validations/addFavorites");
 const routerFavorites = express.Router();
 
 //GUARDAR UNA PELICULA/SERIE A FAVORITO
-routerFavorites.post("/add", addFavortitesValidation,  addFavorite);
+routerFavorites.post("/add", addFavorite);
 
 //VER FAVORITOS DE UN USUARIO
 routerFavorites.post("/see", seeFavorites)
