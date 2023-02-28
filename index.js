@@ -11,7 +11,7 @@ const app = express();
 //MIDDLEWARE PARSEO INFORMACION
 app.use(volleyball);
 app.use(express.json());
-app.use(cors());
+app.use(cors({origin : "http://localhost:3000", credentials: true}));
 
 //MIDDLEWARE COOKIES
 app.use(cookieParser());

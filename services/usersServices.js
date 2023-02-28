@@ -29,7 +29,7 @@ exports.login = async (loginData) => {
 
 exports.persistence = async (token) => {
   if (!token) throw new Error("Inicia sesion");
-
+  
   const { user } = await validateToken(token);
   if (!user) throw new Error("Inicia sesion");
 
