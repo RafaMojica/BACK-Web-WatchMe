@@ -6,7 +6,7 @@ const tokenGenerator = function (payload) {
 };
 
 const validateToken = function (token) {
-  const payload = jwt.verify(token, process.env.SECRE);
+  const payload = jwt.verify(token, process.env.SECRET);
   return payload;
 };
 
