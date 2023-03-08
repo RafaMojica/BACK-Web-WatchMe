@@ -1,7 +1,7 @@
 const axios = require("axios");
 
-exports.popularMovies = async () => {
-  const movies = await axios.get(`${process.env.URL}/movie/popular?api_key=${process.env.KEY}`);
+exports.popularMovies = async (page) => {
+  const movies = await axios.get(`${process.env.URL}/movie/popular?api_key=${process.env.KEY}&page=${page}`);
   return movies.data
 };
 

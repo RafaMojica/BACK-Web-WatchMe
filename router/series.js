@@ -3,7 +3,7 @@ const { popularSeries, selectSerie, searchSeries, genreSeries, topSeries } = req
 const routerSeries = express.Router();
 
 //VER SERIES MAS POPULARES
-routerSeries.get("/popular", popularSeries);
+routerSeries.get("/popular/:page", popularSeries);
 
 //VER SERIE SELECCIONADA
 routerSeries.get("/select/:id", selectSerie);

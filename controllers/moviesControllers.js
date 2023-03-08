@@ -2,7 +2,7 @@ const moviesServices = require("../services/moviesServices");
 
 const popularMovies = async (req, res) => {
   try {
-    const movies = await moviesServices.popularMovies();
+    const movies = await moviesServices.popularMovies(req.params.page);
     res.status(200).send(movies);
   } catch (error) {
     res.sendStatus(404);

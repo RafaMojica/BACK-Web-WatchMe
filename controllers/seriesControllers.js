@@ -2,7 +2,7 @@ const seriesServices = require("../services/seriesServices")
 
 const popularSeries = async (req, res) => {
   try {
-    const series = await seriesServices.popularSeries()
+    const series = await seriesServices.popularSeries(req.params.page)
     res.status(200).send(series);
   } catch (error) {
     res.sendStatus(404);

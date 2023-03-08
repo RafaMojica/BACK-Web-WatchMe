@@ -1,7 +1,7 @@
 const axios = require("axios");
 
-exports.popularSeries = async () => {
-  const series = await axios.get(`${process.env.URL}/tv/popular?api_key=${process.env.KEY}`);
+exports.popularSeries = async (page) => {
+  const series = await axios.get(`${process.env.URL}/tv/popular?api_key=${process.env.KEY}&page=${page}`);
   return series.data
 }
 

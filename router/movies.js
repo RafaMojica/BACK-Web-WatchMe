@@ -3,7 +3,7 @@ const { popularMovies, selectMovie, searchMovies, similarMovies, genreMovies, to
 const routerMovies = express.Router();
 
 //VER PELICULAS MAS POPULARES
-routerMovies.get("/popular", popularMovies);
+routerMovies.get("/popular/:page", popularMovies);
 
 //VER PELICULA SELECCIONADA
 routerMovies.get("/select/:id", selectMovie);
